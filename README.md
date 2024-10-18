@@ -1,8 +1,9 @@
 # Create my Tachiyomi extensions repo from apk
 
 ## Usage:
-1. Put apk in this directory
-2. run start.py
+1. Edit repo.json
+2. Put apk in this directory
+3. run start.py
 
 ## Used files:
 ### create-repo.py:
