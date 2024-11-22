@@ -3,6 +3,8 @@ import shutil
 import subprocess
 import os
 
+os.chdir(Path(__file__).parent)
+
 repo_path = Path('repo')
 apk_path = repo_path / 'apk'
 icon_path = repo_path / 'icon'
