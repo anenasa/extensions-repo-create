@@ -14,11 +14,11 @@ shutil.rmtree(apk_path, ignore_errors=True)
 shutil.rmtree(icon_path, ignore_errors=True)
 apk_path.mkdir(parents=True)
 
-# Move apk to repo/apk/
+# Copy apk to repo/apk/
 for apk in Path().glob('*.apk'):
     new_name = apk.name.replace("-release.apk", ".apk")
-    apk.rename(apk_path / new_name)
-    
+    shutil.copy(apk, apk_path / new_name)
+
 # Copy repo.json
 shutil.copy('repo.json', repo_path / 'repo.json')
 
